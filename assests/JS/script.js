@@ -24,27 +24,34 @@ function generatePassword() {
   var combinedCharacterType = [];
 
   if (numbers == true) {
-    combinedCharacterType.push(numberList);
+    combinedCharacterType = combinedCharacterType.concat(numberList);
   }
   if (symbols == true) {
-    combinedCharacterType.push(symbolsList);
+    combinedCharacterType = combinedCharacterType.concat(symbolsList);
   }
   if (lowerCase == true) {
-    combinedCharacterType.push(lowercaseList);
+    combinedCharacterType = combinedCharacterType.concat(lowercaseList);
   }
   if (upperCase == true) {
-    combinedCharacterType.push(uppercaseList)
+    combinedCharacterType = combinedCharacterType.concat(uppercaseList)
   }
   if (combinedCharacterType.length == 0) {
     alert("Please slect 1 or more character options!");
   }
 
-  var random = Math.floor(Math.random()* passwordLength);
+  
+  
+  let randomItem = combinedCharacterType[Math.floor(Math.random() * combinedCharacterType.length)];
+ 
 
-  let randomItem = combinedCharacterType[Math.floor(Math.random()* passwordLength.Length)];
-  console.log(randomItem) 
+  for(i =0; i < passwordLength; i++) {
+    let randomItem = combinedCharacterType[Math.floor(Math.random() * combinedCharacterType.length)];
+    console.log(randomItem)
+  }
 
-  console.log(random);
+  var generatedPassword = "";
+  console.log(generatedPassword);
+  
 
 }
 
