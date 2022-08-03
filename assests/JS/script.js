@@ -20,7 +20,24 @@ function generatePassword() {
   var lowercaseList = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
   var uppercaseList = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
 
-  
+  var combinedCharacterType = [];
+
+  if (numbers == true) {
+    combinedCharacterType.push(numberList);
+  }
+  if (symbols == true) {
+    combinedCharacterType.push(symbolsList);
+  }
+  if (lowerCase == true) {
+    combinedCharacterType.push(lowercaseList);
+  }
+  if (upperCase == true) {
+    combinedCharacterType.push(uppercaseList)
+  }
+  if (combinedCharacterType.length == 0) {
+    alert("Please slect 1 or more character options!");
+  }
+  console.log(combinedCharacterType)
 }
 
 
