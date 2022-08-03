@@ -10,7 +10,6 @@ function generatePassword() {
     return;
   }
   var passwordLength = Number(userinput);
-  console.log(passwordLength);
 
   var numbers = window.confirm("Would you like your password to include numbers?");
   var symbols = window.confirm("Would you like your password to include symbols?");
@@ -40,10 +39,10 @@ function generatePassword() {
     alert("Please slect 1 or more character options!");
   }
 
- var getRandomItem = combinedCharacterType[Math.floor(Math.random()* combinedCharacterType.length)];
- console.log(getRandomItem);
-}
+  var random = Math.floor(Math.random()* passwordLength);
 
+  console.log(random)
+}
 
 
 // Get references to the #generate element
