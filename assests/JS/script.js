@@ -41,7 +41,11 @@ function generatePassword() {
 
   var random = Math.floor(Math.random()* passwordLength);
 
-  console.log(random)
+  let randomItem = combinedCharacterType[Math.floor(Math.random()* passwordLength.Length)];
+  console.log(randomItem) 
+
+  console.log(random);
+
 }
 
 
