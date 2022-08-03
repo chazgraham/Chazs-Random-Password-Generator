@@ -9,6 +9,8 @@ function generatePassword() {
     alert("That is not a number, please try again!");
     return;
   }
+  var passwordLength = Number(userinput);
+  console.log(passwordLength);
 
   var numbers = window.confirm("Would you like your password to include numbers?");
   var symbols = window.confirm("Would you like your password to include symbols?");
@@ -19,8 +21,6 @@ function generatePassword() {
   var symbolsList = ["!", "@", "#", "$", "%", "?", "&", "*"];
   var lowercaseList = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
   var uppercaseList = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
-
-  var combinedCharacterType = [];
 
   if (numbers == true) {
     combinedCharacterType.push(numberList);
@@ -37,9 +37,14 @@ function generatePassword() {
   if (combinedCharacterType.length == 0) {
     alert("Please slect 1 or more character options!");
   }
-  console.log(combinedCharacterType)
+
+  for(let i = 0; i < passwordLength.length; i++){
+    character = Math.floor(Math.random()*userinput.length);
+    console.log(character)
+  }
 }
 
+var combinedCharacterType = [];
 
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
