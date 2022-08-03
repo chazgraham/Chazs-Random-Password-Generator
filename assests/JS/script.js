@@ -22,6 +22,8 @@ function generatePassword() {
   var lowercaseList = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
   var uppercaseList = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
 
+  var combinedCharacterType = [];
+
   if (numbers == true) {
     combinedCharacterType.push(numberList);
   }
@@ -38,13 +40,11 @@ function generatePassword() {
     alert("Please slect 1 or more character options!");
   }
 
-  for(let i = 0; i < passwordLength.length; i++){
-    character = Math.floor(Math.random()*userinput.length);
-    console.log(character)
-  }
+ var getRandomItem = combinedCharacterType[Math.floor(Math.random()* combinedCharacterType.length)];
+ console.log(getRandomItem);
 }
 
-var combinedCharacterType = [];
+
 
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
